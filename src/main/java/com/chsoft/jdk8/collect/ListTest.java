@@ -1,15 +1,17 @@
-package com.chsoft.echarts;
+package com.chsoft.jdk8.collect;
 
 import java.util.List;
 import java.util.Map;
+
+
 import com.google.common.base.Splitter;
 import com.google.common.collect.Lists;
 import com.google.common.collect.Maps;
 
-public class EchartsTest {
-    
+public class ListTest {
 	
-	public static void setUp(){
+	
+	public static void main(String[] args){
 		Map<String, Object> data = Maps.newHashMap();
 		List<String> dataList = Lists.newArrayList();
 		//parallelStream
@@ -32,12 +34,4 @@ public class EchartsTest {
 		data.putIfAbsent("key1","value1");
 		data.putIfAbsent("key2","value2");
 	}
-	
-	
-	public static void main(String[] args) {
-		setUp();
-		
-	}
-	
-	
 }
