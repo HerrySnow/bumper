@@ -2,14 +2,17 @@ package com.chsoft.echarts;
 
 import java.util.List;
 import java.util.Map;
+
+import org.junit.Test;
+
 import com.google.common.base.Splitter;
 import com.google.common.collect.Lists;
 import com.google.common.collect.Maps;
 
 public class EchartsTest {
     
-	
-	public static void setUp(){
+	@Test
+	public void setUp(){
 		Map<String, Object> data = Maps.newHashMap();
 		List<String> dataList = Lists.newArrayList();
 		//parallelStream
@@ -35,7 +38,6 @@ public class EchartsTest {
 	
 	
 	public static void main(String[] args) {
-		setUp();
 		
 	}
 	

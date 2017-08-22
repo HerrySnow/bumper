@@ -2,24 +2,20 @@ package com.chsoft.jdk8.collect;
 
 import java.util.List;
 import java.util.Map;
-
-
-import com.google.common.base.Splitter;
+import org.junit.Test;
 import com.google.common.collect.Lists;
 import com.google.common.collect.Maps;
 
 public class ListTest {
 	
-	
-	public static void main(String[] args){
+	@Test
+	public void streamTest(){
 		Map<String, Object> data = Maps.newHashMap();
 		List<String> dataList = Lists.newArrayList();
-		//parallelStream
+		//parallelStream并行流
+		//stream顺序流
 		dataList.parallelStream().filter(k->!k.equals("李四")).forEach(k->data.put(k,k));
 		
-		String name="aaa,bbb,ccc  ,ddd,      ,   ,,";
-		List<String> splitToList = Splitter.on(",").omitEmptyStrings().trimResults().splitToList(name);
-		splitToList.forEach(k->System.out.println(k+"============="));
 		
 		for(int i=0;i<23;i++){
 			data.put(i<10?"0"+i:i+"", new Object());
@@ -34,4 +30,5 @@ public class ListTest {
 		data.putIfAbsent("key1","value1");
 		data.putIfAbsent("key2","value2");
 	}
+	
 }
